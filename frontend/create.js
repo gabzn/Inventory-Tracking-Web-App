@@ -15,13 +15,14 @@ const createItem = async (e) => {
     shippingMethod: form.shippingMethod.value
   };
 
+
   await fetch('http://localhost:8000/items', {
     method: 'POST',
     body: JSON.stringify(item),
     headers: { 'Content-Type': 'application/json' }
   })
-
-  window.location.replace('index.html');
+  
+  window.location.replace('index.html'); 
 }
 
 backBtn.addEventListener('click', () => window.location.href='index.html');

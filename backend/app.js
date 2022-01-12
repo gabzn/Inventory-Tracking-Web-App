@@ -11,9 +11,10 @@ app.use(express.json());
 app.post('/items', async (req, res) => {
     try {
         await axios.post('http://localhost:27001/items', req.body);
-        res.json({isSuccessful: true});
+
+        res.status(200).json({ok: true});
     } catch (error) {
-        console.log(error);
+        res.status(500).json({error, ok: false});
     }
 })
 
@@ -22,9 +23,10 @@ app.post('/items', async (req, res) => {
 app.get('/items', async (req, res) => {
     try {
         const databaseRes = await axios.get('http://localhost:27001/items?_order=desc');
-        res.json({items: databaseRes.data});
+
+        res.status(200).json({items: databaseRes.data, ok: true});
     } catch (error) {
-        console.log(error);
+        res.status(500).json({error, ok: false});
     }
 })
 
@@ -34,9 +36,10 @@ app.get('/item/:id', async (req, res) => {
     try {
         const id = req.params.id;
         const databaseRes = await axios.get(`http://localhost:27001/items/${id}`);
-        res.json({item: databaseRes.data});
+
+        res.status(200).json({item: databaseRes.data, ok: true});
     } catch (error) {
-        console.log(error);
+        res.status(500).json({error, ok: false});
     }
 })
 
@@ -46,9 +49,10 @@ app.put('/item/:id', async (req, res) => {
     try {
         const id = req.params.id;
         await axios.put(`http://localhost:27001/items/${id}`, req.body);
-        res.json({isSuccessful: true});
+
+        res.status(200).json({ok: true});
     } catch (error) {
-        console.log(error);
+        res.status(500).json({error, ok: false});
     }
 })
 
@@ -58,10 +62,18 @@ app.delete('/item/:id', async (req, res) => {
     try {
         const id = req.params.id;
         await axios.delete(`http://localhost:27001/items/${id}`);
-        res.json({isSuccessful: true});
+
+        res.status(200).json({ok: true});
     } catch (error) {
-        console.log(error);
+        res.status(500).json({error, ok: false});
     }
+})
+
+// @route   GET /exportdata
+// @desc    Export product data to a CSV.
+app.get('/exportdata', async (req, res) => {
+    
+    res.json({ok: true});
 })
 
 app.listen(8000, () => console.log('Backend is now running'));
