@@ -100,7 +100,7 @@ app.get('/exportdata', (req, res) => {
 
     function afterWrite(error) {
         if(error)   res.status(500).json({error, ok: false});
-        res.json({ok: true});
+        res.status(200).json({ok: true});
     }
 })
 
