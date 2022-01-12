@@ -32,7 +32,7 @@ async function renderItems() {
                 <p>Shipper:${item.shipper}</p>
                 <p>Receiver:${item.receiver}</p>
                 <p>Shipping method:${item.shippingMethod}</p>
-                <a href="edit.html?id=${item.id}">Edit this item</a>
+                <a href="edit.html?id=${item.id}">Edit/Delete</a>
             </div>`
     });
     

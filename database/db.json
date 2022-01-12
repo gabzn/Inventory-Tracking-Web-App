@@ -2,23 +2,33 @@
   "items": [
     {
       "itemName": "Fork",
-      "quantity": "1234",
-      "shipFrom": "New York",
+      "quantity": "234",
+      "shipFrom": "New",
       "shipTo": "Seattle",
-      "shipper": "ABC Company",
-      "receiver": "CDE Company",
+      "shipper": "ABC",
+      "receiver": "CDE",
       "shippingMethod": "Air",
       "id": 1
     },
     {
       "itemName": "Laptop",
-      "quantity": "3333",
+      "quantity": "32",
       "shipFrom": "Chicago",
       "shipTo": "Texas",
       "shipper": "John",
       "receiver": "Joe",
-      "shippingMethod": "Land",
+      "shippingMethod": "Sea",
       "id": 2
+    },
+    {
+      "itemName": "Pets",
+      "quantity": "2",
+      "shipFrom": "Brooklyn",
+      "shipTo": "Queens",
+      "shipper": "Daniel",
+      "receiver": "Jack",
+      "shippingMethod": "Land",
+      "id": 3
     }
   ]
 }
