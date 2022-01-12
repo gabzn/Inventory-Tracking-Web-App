@@ -7,7 +7,7 @@
     "start": "node ./backend/app.js",
     "server": "json-server --watch --port 27001 ./database/db.json"
   },
-  "author": "",
+  "author": "Gabriel Zhen",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.24.0",
