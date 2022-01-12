@@ -19,16 +19,6 @@
       "receiver": "Joe",
       "shippingMethod": "Land",
       "id": 2
-    },
-    {
-      "itemName": "Rice",
-      "quantity": "12312412",
-      "shipFrom": "Here",
-      "shipTo": "There",
-      "shipper": "IDK",
-      "receiver": "GUESS",
-      "shippingMethod": "Air",
-      "id": 4
     }
   ]
 }

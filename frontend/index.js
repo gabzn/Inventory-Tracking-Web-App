@@ -1,5 +1,10 @@
 const container = document.querySelector('.items');
 const searchForm = document.querySelector('.search');
+const exportButt = document.querySelector('.exportButton');
+
+function exportToCSV() {
+    alert('Hi');
+}
 
 async function renderItems() {
     // Query the backend to get the items from the database.
@@ -32,4 +37,5 @@ async function renderItems() {
     }
 }
 
+exportButt.addEventListener('click', exportToCSV);
 window.addEventListener('DOMContentLoaded', renderItems);

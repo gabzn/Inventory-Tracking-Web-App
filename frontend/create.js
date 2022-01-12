@@ -1,4 +1,5 @@
 const form = document.querySelector('form');
+const backBtn = document.querySelector('.back');
 
 const createItem = async (e) => {
   e.preventDefault();
@@ -23,4 +24,5 @@ const createItem = async (e) => {
   window.location.replace('index.html');
 }
 
+backBtn.addEventListener('click', () => window.location.href='index.html');
 form.addEventListener('submit', createItem);

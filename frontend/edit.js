@@ -1,6 +1,7 @@
 const id = new URLSearchParams(window.location.search).get('id');
 const container = document.querySelector('.edit');
 const deleteBtn = document.querySelector('.delete');
+const backBtn = document.querySelector('.back');
 const form = document.getElementById('editForm');
 const uri = 'http://localhost:8000/item/';
 let itemName;
@@ -68,4 +69,6 @@ form.addEventListener('submit', async (e) => {
   window.location.replace('index.html');
 })
 
+
+backBtn.addEventListener('click', () => window.location.href='index.html');
 window.addEventListener('DOMContentLoaded', renderItem);
