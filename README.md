@@ -10,7 +10,8 @@
   3: Enter **npm install** to install the required npm modules.
   
   4: To mimics the database, I decided to use a module called **json-server**.
-     To start the database, enter **json-server --watch --port 27001 ./database/db.json**
+     To start the database, enter 
+     **json-server --watch --port 27001 ./database/db.json**
   
   5: Open up another terminal/command prompt on the root folder.
    
