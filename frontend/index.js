@@ -7,9 +7,9 @@ async function exportToCSV() {
 
     const res = await fetch(uri);
     const data = await res.json();
-    if(data.ok) {
-        alert('Data has been exported. Please check the folder.');
-    }
+
+    if(data.message)    alert(data.message);
+    if(data.ok)         alert('Data has been exported. Please check the folder.');
 }
 
 async function renderItems() {
