@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const axios = require('axios');
 const cors = require('cors');
+const fs = require('fs');
 
 app.use(cors());
 app.use(express.json());
@@ -71,9 +72,33 @@ app.delete('/item/:id', async (req, res) => {
 
 // @route   GET /exportdata
 // @desc    Export product data to a CSV.
-app.get('/exportdata', async (req, res) => {
-    
-    res.json({ok: true});
+app.get('/exportdata', (req, res) => {
+    fs.readFile('../database/db.json', 'utf-8', afterRead);
+    function afterRead(error, data) {
+        if(error) res.status(500).json({error, ok: false});
+        
+        const csvRows = [];
+        const obj = JSON.parse(data);
+
+        // Get the headers for the csv file and join them all together by a ','.
+        const headers = Object.keys(obj.items[0]);
+        csvRows.push(headers.join(','));
+        
+        // Fill each row with the corresponding data.
+        obj.items.forEach(item => {
+            const values = headers.map(header => item[header]);
+            csvRows.push(values.join(','));
+        });
+        
+        // Convert everything into a csv-like string and write a csv file.
+        let csv = csvRows.join('\n');
+        fs.writeFile(`../data.csv`, csv, afterWrite);
+    }
+
+    function afterWrite(error) {
+        if(error)   res.status(500).json({error, ok: false});
+        res.json({ok: true});
+    }
 })
 
 app.listen(8000, () => console.log('Backend is now running'));
