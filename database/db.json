@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "itemName": "Fork",
+      "quantity": "1234",
+      "shipFrom": "New York",
+      "shipTo": "Seattle",
+      "shipper": "ABC Company",
+      "receiver": "CDE Company",
+      "shippingMethod": "Air",
+      "id": 1
+    },
+    {
+      "itemName": "Laptop",
+      "quantity": "3333",
+      "shipFrom": "Chicago",
+      "shipTo": "Texas",
+      "shipper": "John",
+      "receiver": "Joe",
+      "shippingMethod": "Land",
+      "id": 2
+    },
+    {
+      "itemName": "Rice",
+      "quantity": "12312412",
+      "shipFrom": "Here",
+      "shipTo": "There",
+      "shipper": "IDK",
+      "receiver": "GUESS",
+      "shippingMethod": "Air",
+      "id": 4
+    }
+  ]
+}
