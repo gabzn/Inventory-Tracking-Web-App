@@ -14,22 +14,22 @@ async function renderItem() {
 
   const template = `
     <label for='quantity'>Quantity:</label>
-    <input id='quantity' name="quantity" required placeholder=${item.quantity} value=${item.quantity}>
+    <input id='quantity' type='text' name="quantity" required value="${item.quantity}">
       
     <label for='shipFrom'>Ship From:</label>
-    <input id='shipFrom' name="shipFrom" required placeholder=${item.shipFrom} value=${item.shipFrom}>
+    <input id='shipFrom' type='text' name="shipFrom" required value="${item.shipFrom}">
       
     <label for='shipTo'>Ship To:</label>
-    <input id='shipTo' name="shipTo" required placeholder=${item.shipTo} value=${item.shipTo}>
+    <input id='shipTo' type='text' name="shipTo" required value="${item.shipTo}">
 
     <label for='shipper'>Shipper:</label>
-    <input id='shipper' name="shipper" required placeholder=${item.shipper} value=${item.shipper}>
+    <input id='shipper' type='text' name="shipper" required value="${item.shipper}">
       
     <label for='receiver'>Receiver:</label>
-    <input id='receiver' name="receiver" required placeholder=${item.receiver} value=${item.receiver}>
+    <input id='receiver' type='text' name="receiver" required value="${item.receiver}">
       
     <label for='shippingMethod'>Shipping Method:</label>
-    <input id='shippingMethod' name="shippingMethod" required placeholder=${item.shippingMethod} value=${item.shippingMethod}>
+    <input id='shippingMethod' type='text' name="shippingMethod" required value=${item.shippingMethod}>
   `
   // Insert the header to the html first.
   container.insertAdjacentHTML('afterbegin', `<h1>${item.itemName}</h1>`); 
@@ -52,12 +52,12 @@ form.addEventListener('submit', async (e) => {
 
   const updatedItem = {
     itemName: itemName,
-    quantity: form.quantity.value,
-    shipFrom: form.shipFrom.value,
-    shipTo: form.shipTo.value,
-    shipper: form.shipper.value,
-    receiver: form.receiver.value,
-    shippingMethod: form.shippingMethod.value
+    quantity: `${form.quantity.value}`,
+    shipFrom: `${form.shipFrom.value}`,
+    shipTo: `${form.shipTo.value}`,
+    shipper: `${form.shipper.value}`,
+    receiver: `${form.receiver.value}`,
+    shippingMethod: `${form.shippingMethod.value}`
   };
 
   await fetch(`${uri}${id}`, {

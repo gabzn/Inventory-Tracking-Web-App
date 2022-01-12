@@ -77,10 +77,13 @@ app.get('/exportdata', (req, res) => {
     function afterRead(error, data) {
         if(error) res.status(500).json({error, ok: false});
         
-        const csvRows = [];
         const obj = JSON.parse(data);
+        
+        // If there's nothing to export, send back a 400 error.
+        if(!obj.items[0]) res.status(400).json({message: "Nothing to export.", ok: false});
 
         // Get the headers for the csv file and join them all together by a ','.
+        const csvRows = [];
         const headers = Object.keys(obj.items[0]);
         csvRows.push(headers.join(','));
         
