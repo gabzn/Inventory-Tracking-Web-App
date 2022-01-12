@@ -4,7 +4,7 @@
   0: This web app is built using Node.JS. Please install Node.JS first if you have not.
   
   
-  1: Please clone or download this repo by clicking the green Code button.
+  1: Clone or download this repo by clicking the green Code button.
   
   
   2: Open up a terminal/command prompt on the root folder.
