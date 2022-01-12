@@ -1,33 +1,33 @@
 {
   "items": [
     {
-      "itemName": "Fork",
-      "quantity": "234",
-      "shipFrom": "New",
-      "shipTo": "Seattle",
-      "shipper": "ABC",
-      "receiver": "CDE",
-      "shippingMethod": "Air",
-      "id": 1
-    },
-    {
       "itemName": "Laptop",
-      "quantity": "32",
-      "shipFrom": "Chicago",
-      "shipTo": "Texas",
+      "quantity": "200",
+      "shipFrom": "New York",
+      "shipTo": "Chicago",
       "shipper": "John",
       "receiver": "Joe",
       "shippingMethod": "Sea",
+      "id": 1
+    },
+    {
+      "itemName": "Chocolate",
+      "quantity": "23",
+      "shipFrom": "123 Main Street NY",
+      "shipTo": "345 H Street TX",
+      "shipper": "Joe D",
+      "receiver": "Ana M",
+      "shippingMethod": "Land",
       "id": 2
     },
     {
-      "itemName": "Pets",
-      "quantity": "2",
-      "shipFrom": "Brooklyn",
-      "shipTo": "Queens",
-      "shipper": "Daniel",
-      "receiver": "Jack",
-      "shippingMethod": "Land",
+      "itemName": "Bike",
+      "quantity": "1000",
+      "shipFrom": "Hawaii",
+      "shipTo": "California",
+      "shipper": "Linda",
+      "receiver": "Jenny",
+      "shippingMethod": "Air",
       "id": 3
     }
   ]
