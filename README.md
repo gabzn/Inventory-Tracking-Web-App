@@ -1,4 +1,4 @@
-# Shopify-Backend-Challenge
+# Inventory Tracking Web App
 
 ## How to use this web app
   0: This web app is built using Node.JS. Please install Node.JS first if you have not.
